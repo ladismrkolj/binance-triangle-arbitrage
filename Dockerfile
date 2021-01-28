@@ -13,7 +13,7 @@ WORKDIR /home/bot
 
 RUN cd /home/bot
 
-RUN git clone https://github.com/bmino/binance-triangle-arbitrage.git /home/bot
+RUN git clone https://github.com/bmino/binance-triangle-arbitrage.git
 
 RUN cd binance-triangle-arbitrage
 
