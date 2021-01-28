@@ -11,16 +11,12 @@ RUN useradd -m -s /bin/bash bot
 USER bot:bot
 WORKDIR /home/bot
 
-RUN cd /home/bot
-
-RUN git clone https://github.com/bmino/binance-triangle-arbitrage.git
-
-RUN cd binance-triangle-arbitrage
+COPY --chown=bot:bot ./ .
 
 VOLUME /config
 
 USER bot:bot
-WORKDIR /home/bot/binance-triangle-arbitrage
+WORKDIR /home/bot
 
 RUN npm install
 CMD npm start
