@@ -15,6 +15,8 @@ COPY --chown=bot:bot ./ .
 
 VOLUME /config
 
+COPY --chown=bot:bot config/ config/
+
 USER bot:bot
 WORKDIR /home/bot
 
